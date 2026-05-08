@@ -95,7 +95,7 @@ Please provide:
 Be concise and actionable. Format your response clearly with numbered sections."""
 
     payload = {
-        "model": "claude-sonnet-4-20250514",
+        "model": "claude-sonnet-4-5",
         "max_tokens": 1000,
         "messages": [{"role": "user", "content": prompt}]
     }
@@ -114,6 +114,9 @@ Be concise and actionable. Format your response clearly with numbered sections."
     )
 
     result = json.loads(response.data.decode("utf-8"))
+    print(f"Claude API response: {result}")  # debug line
+    if "content" not in result:
+        return f"AI explanation unavailable: {result.get('error', result)}"
     return result["content"][0]["text"]
 
 
