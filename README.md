@@ -31,6 +31,9 @@ User uploads CSV/Excel → pandas quality checks → Claude API → Results on d
 S3 input CSV → Lambda trigger → quality checks → Claude API → JSON saved to S3 → Streamlit dashboard
 ```
 
+<img width="753" height="545" alt="AI-Powered Data Quality Monitor" src="https://github.com/user-attachments/assets/217b36d5-2b1d-42e5-9fa2-f41639479b9e" />
+
+
 ---
 
 ## ✨ Features
